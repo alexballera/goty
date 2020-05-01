@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestore-grafica-c4e2e": {
+      "hosting": {
+        "goty": [
+          "firestore-grafica-c4e2e"
+        ]
+      }
+    }
+  }
+}
