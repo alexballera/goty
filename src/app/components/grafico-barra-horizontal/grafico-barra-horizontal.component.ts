@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafico-barra-horizontal',
@@ -6,25 +6,26 @@ import { Component, OnDestroy } from '@angular/core';
   styleUrls: ['./grafico-barra-horizontal.component.scss']
 })
 export class GraficoBarraHorizontalComponent implements OnDestroy {
+  @Input() results: any[] = [];
 
-  results: any[] = [
-    {
-      name: 'Juego 1',
-      value: 20
-    },
-    {
-      name: 'Juego 2',
-      value: 25
-    },
-    {
-      name: 'Juego 3',
-      value: 15
-    },
-    {
-      name: 'Juego 4',
-      value: 30
-    }
-  ];
+  // results: any[] = [
+  //   {
+  //     name: 'Juego 1',
+  //     value: 20
+  //   },
+  //   {
+  //     name: 'Juego 2',
+  //     value: 25
+  //   },
+  //   {
+  //     name: 'Juego 3',
+  //     value: 15
+  //   },
+  //   {
+  //     name: 'Juego 4',
+  //     value: 30
+  //   }
+  // ];
 
   // options
   showXAxis = true;
@@ -40,21 +41,19 @@ export class GraficoBarraHorizontalComponent implements OnDestroy {
 
   // intervalo;
 
-  constructor() {
+  // constructor() {
 
-    // this.intervalo = setInterval(() => {
-    //   console.log('tick');
+  //   this.intervalo = setInterval(() => {
+  //     const newResults = [...this.results];
+  //     for (const i in newResults) {
+  //       if (newResults.hasOwnProperty(i)) {
+  //         newResults[i].value = Math.round(Math.random() * 100);
+  //       }
+  //     }
 
-    //   const newResults = [...this.results];
-    //   for (const i in newResults) {
-    //     if (newResults.hasOwnProperty(i)) {
-    //       newResults[i].value = Math.round(Math.random() * 100);
-    //     }
-    //   }
-
-    //   this.results = [...newResults];
-    // }, 1500);
-  }
+  //     this.results = [...newResults];
+  //   }, 1500);
+  // }
 
   onSelect(event) {
     console.log(event);

@@ -10,6 +10,8 @@ import { map } from 'rxjs/operators';
 })
 export class InicioComponent implements OnInit {
 
+  juegos: any[] = [];
+
   constructor(private db: AngularFirestore) { }
 
   ngOnInit() {
@@ -27,6 +29,8 @@ export class InicioComponent implements OnInit {
       map((resp: Game[]) => resp.map(({name, votos}) => ({name, value: votos})))
     )
     .subscribe(resp => {
+
+      this.juegos = resp;
 
       console.log(resp);
     });
